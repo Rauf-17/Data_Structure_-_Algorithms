@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1677436890 source:f:\cpp\hw\main.cpp
+	<iostream>
+	<chrono>
+	<cstdlib>
+	<fstream>
+	<string>
+
