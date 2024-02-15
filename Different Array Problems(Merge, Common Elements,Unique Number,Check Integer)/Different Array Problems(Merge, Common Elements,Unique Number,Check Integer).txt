@@ -1,0 +1,207 @@
+1/ Initialize TWO integer arrays of different sizes. Merge the input arrays and create a new array.
+Then print the new array in reverse order.
+ 
+Answer-
+
+
+ #include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int arr1[5]={1,2,3,4,5};
+  int arr2[3]={2,4,6};
+
+ for (int i=0; i<5; i++){
+
+    cout<<arr1[i];
+ }
+
+  for(int j=0; j<3 ; j++){
+
+    cout<<arr2[j];
+  }
+
+    return 0;
+}
+
+2/ Initialize TWO integer arrays A and B of different sizes. Make a new array with the common elements between A and B.
+ Print the new array element(s). If there is no common element, output “No common element!”.
+
+
+Answer-
+
+
+ #include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int arr1[4] = {1,2,3,4};
+  int arr2[5] = {1,2,3,4,7};
+  int arr3[5];
+  int y,k=0;
+
+  for ( int i=0; i<4; i++){
+
+    for (int j=0; j<5; j++){
+        if (arr1[i] == arr2[j]){
+            y=0;
+            for (int x=0; x<k; x++){
+
+                if(arr1[i]== arr3[x])
+                  y++;
+                  break;
+            }
+             }
+            if(y==0)
+            {
+               arr3[k] = arr1[i];
+               k++;
+               break;
+        }
+    }
+  }
+ 
+  }
+
+  cout<<"The Common Elements Are :" ;
+  for(int i=0; i<k; i++){
+
+    cout<<arr3[i] ;
+
+  }
+
+   if (arr3 !=0){
+    cout<<"No Common Elements"<<endl;
+    return 0;
+
+
+    return 0;
+}
+
+
+3/  3. Initialize an array. Size should be more than FIVE. Write you program to change the array in such a way so that there cannot be any duplicate element
+ in the array anymore. Print the changed array. If the initialized array already had no duplicate elements from the beginning,
+ output a message saying “Array already unique!”;3. Initialize an array. Size should be more than FIVE. Write you program to change the array
+ in such a way so that there cannot be any duplicate element in the array anymore. Print the changed array. If the initialized array already had no duplicate
+ elements from the beginning, output a message saying “Array already unique!”;
+
+
+Answer-
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+    int arr[6]={1,2,2,4,5,6};
+    int x=0;
+
+    for(int i=0; i<6; i++){
+
+        for(int j=0; j<6; j++){
+
+            if(j==i){
+
+                continue;
+            }
+
+            else if(arr[i]==arr[j]){
+
+                arr[j]=0;
+
+                x=1;
+            }
+        }
+    }
+
+
+    if(x==1){
+
+         for(int i=0;i<6;i++){
+
+            if(arr[i]!=0){
+
+                cout<<arr[i]<<" ";
+            }
+        }
+    }
+
+    else{
+            cout<<"Array already unique!";
+        }
+
+    return 0;
+}
+
+
+
+
+
+4/ 4. Initialize an integer array A of size 10.
+ Take an integer as input and print how many times that integer occurs in A.
+
+Answer-
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int arr[10]={1,2,3,6,2,1,3,5,1,4};
+    int x,z=0;
+
+    cout<<"Please Enter The Value :"<<endl;
+    cin>>x;
+
+    for(int y=0;y<10;y++){
+
+      if(x==arr[y]){
+
+            z++;
+       }
+    }
+    cout<<z<<" Times";
+
+
+    return 0;
+}
+
+5/ 5. Initialize an integer array of size 10. Print the number of time each element occurs in the array.
+
+
+Answer-
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[10]={8,4,6,1,6,9,6,1,9,8};
+    int x,y=0;
+
+    for(int i=0; i<10; i++){
+
+      for(int j=0; j<10; j++){
+
+            if(arr[i]==arr[j]){
+
+                y++;
+       }
+    }
+    cout<< arr[i]<<" Occurs "<< y<<" Times"<<endl;
+
+    y=0;
+
+    }
+    return 0;
+}
